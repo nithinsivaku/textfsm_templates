@@ -1,0 +1,34 @@
+Hardware inventory:
+Item             Version  Part number  Serial number     Description
+Chassis                                EM043             JNP10008 [PTX10008]
+Midplane 0       REV 16   750-086802   BCBJ1842          Midplane 8
+FPM 0            REV 02   711-086964   BCBG2397          Front Panel Display
+PSM 0            Rev 03   740-069994   1F219400093       JNP10K 5500W AC/HVDC Power Supply Unit
+PSM 1            Rev 03   740-069994   1F219340253       JNP10K 5500W AC/HVDC Power Supply Unit
+PSM 2            Rev 03   740-069994   1F219400080       JNP10K 5500W AC/HVDC Power Supply Unit
+PSM 3            Rev 03   740-069994   1F219290117       JNP10K 5500W AC/HVDC Power Supply Unit
+PSM 4            Rev 03   740-069994   1F219400065       JNP10K 5500W AC/HVDC Power Supply Unit
+PSM 5            Rev 03   740-069994   1F219400152       JNP10K 5500W AC/HVDC Power Supply Unit
+Routing Engine 0          BUILTIN      BUILTIN           JNP10K-RE1-S128
+CB 0             REV 03   750-110016   BCBJ6531          Control Board
+FPC 0            REV 08   750-096187   BCBD9296          JNP10K-LC1202
+  CPU            REV 07   711-072984   BCBD9457          JNP10K-LC1201 PMB Board
+  PIC 0                   BUILTIN      BUILTIN           JNP10K-4Q56DD-32Q28-LZ-LC-PIC
+    Xcvr 0       REV 01   740-067443   QK0200NS          QSFP+-40G-SR4
+    Xcvr 2       REV 01   740-067443   QK0202AS          QSFP+-40G-SR4
+    Xcvr 6       REV 01   740-061405   1ECQ13500BE       QSFP-100GBASE-SR4-T2
+    Xcvr 10      REV 01   740-061405   1ECQ12510T6       QSFP-100GBASE-SR4-T2
+    Xcvr 11      REV 01   740-061405   1ECQ114729V       QSFP-100GBASE-SR4-T2
+FPC 1            REV 08   750-096187   BCBD9309          JNP10K-LC1202
+  CPU            REV 07   711-072984   BCBD9435          JNP10K-LC1201 PMB Board
+  PIC 0                   BUILTIN      BUILTIN           JNP10K-4Q56DD-32Q28-LZ-LC-PIC
+    Xcvr 0       REV 01   740-058734   1A3CQ1A63009T     QSFP-100GBASE-SR4
+    Xcvr 2       REV 01   740-058734   1A3CQ1A63008H     QSFP-100GBASE-SR4
+SIB 0            REV 17   750-083423   BCAX9948          SIB-JNP10008
+SIB 1            REV 17   750-083423   BCAX9924          SIB-JNP10008
+SIB 2            REV 17   750-083423   BCAX9958          SIB-JNP10008
+SIB 3            REV 17   750-083423   BCAX9967          SIB-JNP10008
+FTC 0            REV 18   750-083435   BCBG0291          Fan Controller 8
+FTC 1            REV 18   750-083435   BCBG0283          Fan Controller 8
+Fan Tray 0       REV 08   750-103312   BCBG0301          Fan tray 8
+Fan Tray 1       REV 08   750-103312   BCBG0312          Fan tray 8
