@@ -1,35 +1,34 @@
-Value Filldown FPC (\d+)
-Value Filldown MIC (\d+)
-Value Filldown PIC (\d+)
-Value XCVR (\d+)
-Value PART (\S+)
-Value SERIAL (\S+)
-Value DESCRIPTION (\S+)
+Value Required Item (\S+)
+Value Required Version (\S+)
+Value Required Part_Number (\S+)
+Value Required Serial_Number (\S+)
+Value Required Description (\S+)
 
 Start
-  ^Hardware.*
-  ^Item\s+Version\s+Part\s+number\s+Serial\s+number\s+Description\s*$$
-  ^\s*(Chassis|Midplane|FPM|PSM|Pseudo|Routing\s+Engine|Mi\S+|CB|AFEB|Routing|PEM|TFEB|SIB|FTC|CPU|QXM|Power\s+Supply|Fan\s+Tray).*
-  ^.*FPC\s+${FPC}.*$$ -> FPC
-  ^{master
-  ^\s*$$ 
-  ^. -> Error
+ ^${Item}\s+${Version}\s+${Part_Number}\s+${Serial_Number}\s+${Description} -> Record
 
-FPC
-  ^\s*FPC\s+${FPC}
-  ^\s*MIC\s+${MIC}
-  ^\s*PIC\s+${PIC} -> XCVR
-  ^\s*CPU
-  ^\s*$$
-  ^. -> Error
 
-XCVR
-  ^\s*Xcvr\s+${XCVR}\s+(REV\s+(|\d+)|]|)\s+${PART}\s+${SERIAL}\s+${DESCRIPTION} -> Record
-  ^\s*FPC\s+${FPC} -> FPC
-  ^\s*MIC\s+${MIC} -> FPC
-  ^\s*PIC\s+${PIC}
-  ^\s*(Chassis|Midplane|FPM|Pseudo|Routing\s+Engine|Mi\S+|CB|AFEB|Routing|PEM|TFEB|SIB|FTC|CPU|QXM|Power\s+Supply|Fan\s+Tray).* -> Start
-  ^\s*$$
-  ^. -> Error
+# Start
+#   ^Hardware.*
+#   ^Item\s+Version\s+Part\s+number\s+Serial\s+number\s+Description\s*$$
+#   ^Chassis\s*$$
+#   ^\s*(Chassis|Midplane|FPM|PSM|Pseudo|Routing\s+Engine|Mi\S+|CB|AFEB|Routing|PEM|TFEB|SIB|FTC|CPU|QXM|Power\s+Supply|Fan\s+Tray).*
 
-EOF
+# FPC
+#   ^\s*FPC\s+${FPC}
+#   ^\s*MIC\s+${MIC}
+#   ^\s*PIC\s+${PIC} -> XCVR
+#   ^\s*CPU
+#   ^\s*$$
+#   ^. -> Error
+
+# XCVR
+#   ^\s*Xcvr\s+${XCVR}\s+(REV\s+(|\d+)|]|)\s+${PART}\s+${SERIAL}\s+${DESCRIPTION} -> Record
+#   ^\s*FPC\s+${FPC} -> FPC
+#   ^\s*MIC\s+${MIC} -> FPC
+#   ^\s*PIC\s+${PIC}
+#   ^\s*(Chassis|Midplane|FPM|Pseudo|Routing\s+Engine|Mi\S+|CB|AFEB|Routing|PEM|TFEB|SIB|FTC|CPU|QXM|Power\s+Supply|Fan\s+Tray).* -> Start
+#   ^\s*$$
+#   ^. -> Error
+
+# EOF
