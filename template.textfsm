@@ -1,4 +1,4 @@
-Value Item (\S+)
+Value Item (\D+)
 Value Position (\d+)
 Value Version (\S+)
 Value Version_no (\S+)
@@ -7,7 +7,7 @@ Value Serial_Number (\S+)
 Value Description (.*)
 
 Start
- ^${Item}\s+${Position}\s+${Version}\s+${Version_no}\s+${Part_Number}\s+${Serial_Number}\s+${Description} -> Record
+ ^${Item}\s+${Position}\s+${Version}\s+${Version_no}\s+${Part_Number}\s+${Serial_Number}\s+${Description}$$ -> Record
 
 End
 
