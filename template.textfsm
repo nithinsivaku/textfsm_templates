@@ -1,15 +1,17 @@
-Value Item (\D+)
+Value Required Item (\D+)
 Value Position (\d+)
 Value Version (\S+)
 Value Version_no (\S+)
 Value Part_Number (\S+)
-Value Serial_Number (\S+)
-Value Description (.*)
+Value Required Serial_Number (\S+)
+Value Required Description (.*)
 
 Start
  ^${Item}\s+${Position}\s+${Version}\s+${Version_no}\s+${Part_Number}\s+${Serial_Number}\s+${Description}$$ -> Record
 
-End
+Done
+
+#refer https://blog.networktocode.com/post/parsing-strategies-ntc-templates/
 
 # Start
 #   ^Hardware.*
