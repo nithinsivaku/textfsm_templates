@@ -1,1 +1,0 @@
-# textfsm_templates
