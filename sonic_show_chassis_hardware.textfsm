@@ -1,0 +1,9 @@
+Value Item (\w+\s\w+\s\d+|\s+\w+\s+\d+|\w+\s\d+|\s+\w+)
+Value Version (\w+\s\d+|\s+)
+Value Part_Number (\S+)
+Value Serial_Number (\S+)
+Value Description (.*)
+
+
+Start
+ ^${Item} +${Version} +${Part_Number} +${Serial_Number} +${Description} -> Record
