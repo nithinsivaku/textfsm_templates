@@ -1,7 +1,7 @@
-Value Item (\w+\s\w+\s\d+|\s+\w+\s+\d+|\w+\s\d+|\s+\w+)
+Value Item (\w+\s\w+\s\d+|\s+\w+\s+\d+|\w+\s\d+|\s+\w+|Chassis)
 Value Version (\w+\s\d+|\s+)
-Value Part_Number (\S+)
-Value Serial_Number (\S+)
+Value Part_Number (\d{3}-\d{6}|BUILTIN|\s+)
+Value Serial_Number (\w+|\s+)
 Value Description (.*)
 
 
